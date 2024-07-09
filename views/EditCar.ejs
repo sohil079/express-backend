@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EditCar</title>
+</head>
+<body>
+    
+    <%=data%>
+
+    <h3>Mise à jour :</h3>
+
+    <form action="/updatecar/<%= data._id%>?_method=PUT" method="post">
+
+        <label>Marque</label>
+        <input type="text" name="marque" value="<%=data.marque%>">
+        <label>Modele</label>
+        <input type="text" name="modele" value="<%=data.modele%>">
+        <label>Couleur</label>
+        <input type="text" name="couleur" id="couleur" value="<%=data.couleur%>">
+        <label>Description</label>
+        <textarea name="description" id="description"><%=data.description%></textarea>
+
+        <input type="submit">
+    </form>
+
+    <form action="/deletecar/<%=data._id%>?_method=DELETE" method="post">
+        <input type="submit" value="suprimer">
+        
+        
+    </form>
+</body>
+</html>

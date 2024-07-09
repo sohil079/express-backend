@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Page d'accueil !</h1>
+    <h2>Listes d'utilisateur :</h2>
+<!-- la boucle forEach permet de parcourir les donnée du début à la fin -->
+    <% data.forEach(personne =>{ %>  
+        <a href= "/contact/<%= personne._id %>">
+        <h2>
+            <%= personne._id %>
+        </h2>
+
+        </a>
+
+        <h2>
+        
+        </h2>
+    <% }) %>   
+    
+    
+</body>
+</html>
